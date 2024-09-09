@@ -12,3 +12,49 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }*/
+
+.navbar {
+  background-color: #ffffff; /* Cor de fundo da Navbar */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+/* Estilo para o item ativo */
+.nav-link.active {
+  color: #1a73e8 !important; /* Escolha a cor desejada, como #ff6347 (tomato) */
+}
+
+/* Também pode aplicar o hover para os links ativos */
+.nav-link:hover {
+  color: #1a73e8; /* Mesma cor ao passar o mouse */
+}
+
+
+/* Estilos gerais para o navbar */
+.navbar-links {
+  width: 100%; /* Preencher todo o espaço disponível */
+}
+/* Centraliza o grupo de navegação no desktop */
+.navbar-nav {
+  list-style-type: none;
+  padding-left: 0em;
+  text-align: center;
+}
+
+/* Modo desktop: centraliza o grupo de navegação */
+@media (min-width: 992px) {
+  .navbar-nav {
+    justify-content: center; /* Centraliza os ícones de navegação */
+  }
+}
+
+/* Modo mobile: empilha ícones de navegação verticalmente */
+@media (max-width: 991px) {
+  .navbar-nav {
+    flex-direction: column; /* Empilha os ícones verticalmente */
+    text-align: center;
+  }
+
+  .nav-item {
+    margin-bottom: 10px; /* Espaço entre ícones no mobile */
+  }
+}
